@@ -5,6 +5,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-##
+## it will use above entire code it will create image with below code and create image with ngix
+## if we access nginx it will automatic route to react code. 
 FROM nginx
 COPY --from=builder /app/build /usr/share/nginx/html
